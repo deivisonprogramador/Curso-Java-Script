@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aula 10 - DOM</title>
+
+<style>
+
+#area {
+
+    background:green;
+    font: normal  20px Arial;
+    color: white;
+    width: 200px;
+    height: 200px;
+    line-height: 200px;
+    text-align: center;
+}
+
+
+</style>
+
+
+</head>
+<body>
+    <div id="area"  >
+        INTERAJA...
+
+    </div>
+
+
+    
+    <script>
+            //Usar esse comando abaixo quando quiser fazer pelo HTML.
+            //onclick="clicar()" onmouseover="entrar()" onmouseout="sair()"
+
+         var area = window.document.getElementById("area")
+         area.addEventListener('click', clicar)
+         area.addEventListener('mouseenter', entrar)
+         area.addEventListener('mouseout',saiu)
+
+
+
+        function clicar() {
+            area.innerText= "CLICOU!"
+            area.style.background="red"
+        }
+
+
+
+        function entrar(){
+            area.innerText="ENTROU!"
+        }
+
+        function saiu(){
+            area.innerText="SAIU!"
+            area.style.background="green"
+        }
+
+    </script>
+</body>
+</html>
