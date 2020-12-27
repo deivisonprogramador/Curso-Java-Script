@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aula 11 - Somador</title>
+
+    <style> 
+    body{ font: normal 18pt Arial;
+    }
+    
+    input { font: normal 18pt Arial;
+            width: 100px;
+
+
+    }
+
+
+
+
+    </style>
+
+
+
+</head>
+<body>
+    
+    <h1>Somando valores</h1> 
+    
+    <input type="number" name="txtn1" id="txtn1"> +
+    <input type="number" name="txtn2"  id="txtn2">    
+    <input type="button" value="Calcular a Somar" onclick="somar ()">
+</br> 
+</br>
+    <div id="res"> </div>
+
+    
+
+
+<script>
+
+
+            /*Essa  função pega os valores digitados no formulário, em seguida, converte esses valores
+              números, logo após, armazena esses números nas variáveis n1 e n2, e por fim, calcula a soma
+              desses dois números.
+            */
+           
+function somar(){
+        //pega os valores das caixas de texto
+        var tn1 = window.document.getElementById("txtn1")
+        var tn2 = window.document.getElementById("txtn2")
+        var res = window.document.getElementById("res")
+
+        //tranforma as variáveis das caixas de texto em números
+        var n1 = Number(tn1.value)
+        var n2 = Number(tn2.value)
+        //cria a variavel s que armazenará a soma de n1 com n2
+        var s = n1 + n2 
+        //mostra o resultado na div de id res
+        res.innerHTML= `A soma entre ${n1} e ${n2} é igual a <strong>${s}</strong>.`
+}
+</script>
+
+
+
+
+
+
+
+</body>
+</html>
