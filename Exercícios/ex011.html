@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Testa Nacionalidade</title>
+</head>
+<body>
+    
+<h1>Verificador de Brasileiro</h1>
+
+Digite seu pais: <input type="text" name="txtpais" id="txtpais">
+                 <input type="button" value="Verificar" onclick="nacionalidade()">
+
+<div id="res">          </div>
+
+
+<script>
+    
+    function nacionalidade () {
+    let pais = document.getElementById('txtpais')
+    let valor_pais = (pais.value)                                       //querySelector('input#txtpais')
+    let res  = document.getElementById('res')                           //querySelector('div#res')
+    res.innerHTML = `<p> Seu país é <strong> ${valor_pais}</strong>.</p>`
+
+    if (valor_pais == 'Brasil'){
+
+        res.innerHTML+= '<p>Você é Brasileiro!</p>'
+
+    }
+    else{
+res.innerHTML += '<p>Você é estrangeiro!</p>'
+
+    }
+    
+}
+
+</script>
+
+
+
+
+
+</body>
+</html>
