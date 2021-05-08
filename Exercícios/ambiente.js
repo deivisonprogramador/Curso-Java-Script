@@ -10,7 +10,7 @@ while (c <= 10)
 
 
 
-/*let c = 1;
+/* let c = 1;
 
 while (c<=10) {
     console.log(`Passo ${c}`)
